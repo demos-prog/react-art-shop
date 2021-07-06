@@ -6,9 +6,9 @@ function App() {
   return (
     <div className="wrapper">
       <div className="container">
-        <Header></Header>
+        <Header />
       </div>
-      <hr></hr>
+      <hr />
     </div>
   );
 }
