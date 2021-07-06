@@ -1,0 +1,20 @@
+.header {
+  height: 96px;
+  display: flex;
+  align-items: center;
+}
+
+.header nav a {
+  margin-left: 50px;
+  font-family: Merriweather;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 150%;
+  color: #343030;
+}
+
+.header nav a:hover {
+  color: black;
+  font-weight: bold;
+}
