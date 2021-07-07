@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./item.css";
 
+import loader from "./img/Wedges-3s-58px.png";
 import checked from "./img/checked.png";
 
 export default function Item(props) {
@@ -9,6 +10,7 @@ export default function Item(props) {
 
   async function buyClick() {
     setLoading(true);
+
     const fch = await fetch("https://jsonplaceholder.typicode.com/posts/1");
     const resp = await fch.ok;
     if (resp) {
@@ -33,9 +35,15 @@ export default function Item(props) {
             <div className="priceNumber">{props.price} $</div>
           </div>
           {active ? (
-            <button id="buyBtn" onClick={buyClick}>
-              {loading ? "Loading..." : "Купить"}
-            </button>
+            <>
+              {loading ? (
+                <img id="loaderItem" src={loader} alt={loader}></img>
+              ) : (
+                <button id="buyBtn" onClick={buyClick}>
+                  Купить
+                </button>
+              )}
+            </>
           ) : (
             <button id="inPocketBtn">
               <img src={checked} alt="checked"></img> В корзине

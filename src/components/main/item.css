@@ -17,6 +17,7 @@
 .buy {
   margin-top: 20px;
   display: flex;
+  justify-content: space-between;
 }
 
 .itemContent {
@@ -34,7 +35,7 @@
   text-align: left;
 }
 
-.price{
+.price {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -91,4 +92,10 @@
   height: 12px;
   object-fit: contain;
   object-position: center;
+}
+
+#loaderItem {
+  margin: auto;
+  width: 50px;
+  height: 50px;
 }
