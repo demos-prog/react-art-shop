@@ -14,7 +14,7 @@ export default function Item(props) {
             {props.discountIs && (
               <div className="discount">{props.discount} $</div>
             )}
-            <div>{props.price} $</div>
+            <div className="priceNumber">{props.price} $</div>
           </div>
           {props.active ? (
             <button id="buyBtn">Купить</button>
