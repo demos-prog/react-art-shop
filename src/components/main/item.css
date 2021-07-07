@@ -78,13 +78,14 @@
 }
 
 #inPocketBtn {
+  height: min-content;
   display: flex;
   align-items: center;
   background-color: #5b3a32;
 }
 
 #inPocketBtn img {
-  transform: translateX(-10px);
+  transform: translateX(-8px);
   width: 19px;
   height: 12px;
   object-fit: contain;
