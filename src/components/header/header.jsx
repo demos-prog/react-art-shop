@@ -14,7 +14,7 @@ export default function Header() {
         <a href="/about">О галерее</a>
       </nav>
       <form id="search">
-        <input type="text" placeholder="Поиск по названию картинки"></input>
+        <input type="text" placeholder="Поиск по названию картины"></input>
         <button type="submit">Найти</button>
       </form>
     </div>
