@@ -10,7 +10,6 @@ export default function Item(props) {
 
   async function buyClick() {
     setLoading(true);
-
     const fch = await fetch("https://jsonplaceholder.typicode.com/posts/1");
     const resp = await fch.ok;
     if (resp) {
