@@ -5,14 +5,18 @@ import checked from "./img/checked.png";
 
 export default function Item(props) {
   const [active, setActive] = useState(true);
+  const [loading, setLoading] = useState(false);
 
   async function buyClick() {
+    setLoading(true);
     const fch = await fetch("https://jsonplaceholder.typicode.com/posts/1");
     const resp = await fch.ok;
     if (resp) {
       setActive(false);
+      setLoading(false);
     } else {
       alert("Не пошло !!!");
+      setLoading(false);
     }
   }
 
@@ -30,7 +34,7 @@ export default function Item(props) {
           </div>
           {active ? (
             <button id="buyBtn" onClick={buyClick}>
-              Купить
+              {loading ? "Loading..." : "Купить"}
             </button>
           ) : (
             <button id="inPocketBtn">
