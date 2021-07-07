@@ -22,6 +22,10 @@ export default function Item(props) {
     }
   }
 
+  function inPocketBtnClick() {
+    setActive(true);
+  }
+
   return (
     <div className="item">
       <img src={props.img} alt={props.img}></img>
@@ -45,7 +49,7 @@ export default function Item(props) {
               )}
             </>
           ) : (
-            <button id="inPocketBtn">
+            <button id="inPocketBtn" onClick={inPocketBtnClick}>
               <img src={checked} alt="checked"></img> В корзине
             </button>
           )}
