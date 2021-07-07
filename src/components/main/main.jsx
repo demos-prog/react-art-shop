@@ -18,7 +18,6 @@ export default function Main() {
           discountIs={true}
           discount="2 000 000"
           price="1 000 000"
-          active={true}
         />
         <Item
           img={img2}
@@ -26,7 +25,6 @@ export default function Main() {
           discountIs={false}
           discount="2 000 000"
           price="3 000 000"
-          active={true}
         />
         <Item
           img={img3}
@@ -34,7 +32,6 @@ export default function Main() {
           discountIs={true}
           discount="6 000 000"
           price="5 000 000"
-          active={false}
         />
         <Item
           img={img4}
@@ -42,7 +39,6 @@ export default function Main() {
           discountIs={true}
           discount="2 000 000"
           price="1 000 000"
-          active={false}
         />
       </div>
     </div>
