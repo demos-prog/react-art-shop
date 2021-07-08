@@ -18,19 +18,21 @@ export default function Main(props) {
   }
 
   const list = props.arr.map((item) => {
-    const disc = tostr(item.discount);
-    const prc = tostr(item.price);
+    if (item) {
+      const disc = tostr(item.discount);
+      const prc = tostr(item.price);
 
-    return (
-      <Item
-        key={nanoid()}
-        img={item.img}
-        text={item.text}
-        discountIs={item.discountIs}
-        discount={disc}
-        price={prc}
-      />
-    );
+      return (
+        <Item
+          key={nanoid()}
+          img={item.img}
+          text={item.text}
+          discountIs={item.discountIs}
+          discount={disc}
+          price={prc}
+        />
+      );
+    } return null;
   });
 
   return (
