@@ -62,8 +62,12 @@ export default function App() {
         <hr />
         <div className="container">
           <Switch>
-            <Route path="/about" component={<About />} />
-            <Route path="/" component={<Main arr={list} />} />
+            <Route path="/about">
+              <About />
+            </Route>
+            <Route path="/">
+              <Main arr={list} />
+            </Route>
           </Switch>
         </div>
       </div>
