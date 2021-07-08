@@ -2,7 +2,10 @@ import "./null_styles.css";
 import "./App.css";
 import Main from "./components/main/main";
 import Header from "./components/header/header";
+import About from "./components/about/about";
 import { useState } from "react";
+
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import img1 from "./components/main/img/main-img1.png";
 import img2 from "./components/main/img/main-img2.png";
@@ -51,14 +54,19 @@ export default function App() {
   });
 
   return (
-    <div className="wrapper">
-      <div className="container">
-        <Header value={value} setValue={setValue} />
+    <Router>
+      <div className="wrapper">
+        <div className="container">
+          <Header value={value} setValue={setValue} />
+        </div>
+        <hr />
+        <div className="container">
+          <Switch>
+            <Route path="/about" component={<About />} />
+            <Route path="/" component={<Main arr={list} />} />
+          </Switch>
+        </div>
       </div>
-      <hr />
-      <div className="container">
-        <Main arr={list} />
-      </div>
-    </div>
+    </Router>
   );
 }
