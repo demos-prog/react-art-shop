@@ -32,7 +32,9 @@ export default function Main(props) {
           price={prc}
         />
       );
-    } return null;
+    } else {
+      return null;
+    }
   });
 
   return (

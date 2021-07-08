@@ -52,8 +52,9 @@ export default function App() {
   const list = arr.map((item) => {
     if (item.text.includes(value)) {
       return item;
+    } else {
+      return null;
     }
-    return null;
   });
 
   return (
