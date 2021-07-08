@@ -7,9 +7,9 @@ export default function Header(props) {
     <div className="header">
       <img src={logo} alt="Logo"></img>
       <nav>
-        <a href="/catalog">Каталог</a>
-        <a href="/dostavks">Доставка</a>
-        <a href="/oplata">Оплата</a>
+        <a href="/">Каталог</a>
+        <a href="/delivery">Доставка</a>
+        <a href="/payment">Оплата</a>
         <a href="/contacts">Контакты</a>
         <a href="/about">О галерее</a>
       </nav>

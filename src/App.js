@@ -3,6 +3,9 @@ import "./App.css";
 import Main from "./components/main/main";
 import Header from "./components/header/header";
 import About from "./components/about/about";
+import Contacts from "./components/contacts/contacts";
+import Delivery from "./components/delivery/delivery";
+import Payment from "./components/payment/payment";
 import { useState } from "react";
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
@@ -62,6 +65,15 @@ export default function App() {
         <hr />
         <div className="container">
           <Switch>
+            <Route path="/contacts">
+              <Contacts />
+            </Route>
+            <Route path="/delivery">
+              <Delivery />
+            </Route>
+            <Route path="/payment">
+              <Payment />
+            </Route>
             <Route path="/about">
               <About />
             </Route>
