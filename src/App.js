@@ -1,7 +1,8 @@
 import "./null_styles.css";
 import "./App.css";
-import Main from "./components/main/main";
 import Header from "./components/header/header";
+import Main from "./components/main/main";
+import Footer from "./components/footer/footer";
 import About from "./components/about/about";
 import Contacts from "./components/contacts/contacts";
 import Delivery from "./components/delivery/delivery";
@@ -83,6 +84,7 @@ export default function App() {
             </Route>
           </Switch>
         </div>
+        <Footer />
       </div>
     </Router>
   );
